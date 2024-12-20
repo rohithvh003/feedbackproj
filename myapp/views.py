@@ -8,6 +8,7 @@ def formview(request):
     if (request.method == "POST"):
         f =Feedbackform(request.POST  )
         if f.is_valid():
+
             name = f.cleaned_data['name']
             id = f.cleaned_data['id']
             email = f.cleaned_data['email']
